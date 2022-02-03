@@ -1,0 +1,28 @@
+<div id="player-placeholder" style="width: 560px; height: 395px"></div>
+<script src="https://qa-apache-php7.dev.kaltura.com/p/1091/sp/109100/embedPlaykitJs/uiconf_id/15226520/partner_id/1091/versions/"></script>
+<script type="text/javascript">
+  try {
+    var kalturaPlayer = KalturaPlayer.setup({
+      targetId: "player-placeholder",
+      provider: {
+        partnerId: 3223,
+        env: {
+          serviceUrl: "https://api.frs1.ott.kaltura.com/api_v3",
+        },
+      },
+      drm: {
+        keySystem: "com.microsoft.playready",
+      },
+      playback: {
+        autoplay: true,
+        allowMutedAutoPlay: true,
+      },
+    });
+    kalturaPlayer.loadMedia({
+      entryId: "2762335",
+      formats: ["Dash_widevine", "Hls_fairplay"],
+    });
+  } catch (e) {
+    console.error(e.message);
+  }
+</script>
